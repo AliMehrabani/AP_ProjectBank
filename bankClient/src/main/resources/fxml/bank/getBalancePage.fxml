@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.GetBalancePageGraphicController">
+   <children>
+      <Pane layoutX="219.0" layoutY="113.0" prefHeight="460.0" prefWidth="480.0" style="-fx-border-color: gray; -fx-border-radius: 8;">
+         <children>
+            <Label alignment="CENTER" layoutX="101.0" layoutY="46.0" prefHeight="55.0" prefWidth="280.0" text="Account Info">
+               <font>
+                  <Font name="Raleway Light" size="37.0" />
+               </font>
+            </Label>
+            <Label fx:id="balanceLabel" alignment="CENTER" layoutX="132.0" layoutY="162.0" prefHeight="61.0" prefWidth="210.0" text="Label">
+               <font>
+                  <Font name="Lato Regular" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="65.0" layoutX="64.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../photos/bank/money.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="65.0" layoutX="346.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../photos/bank/money.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="323.0" prefHeight="55.0" prefWidth="101.0" text="username:">
+               <font>
+                  <Font name="Raleway Light" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4caf50" height="2.0" layoutX="17.0" layoutY="296.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="451.0" />
+            <Label layoutX="34.0" layoutY="386.0" prefHeight="55.0" prefWidth="169.0" text="account number:">
+               <font>
+                  <Font name="Raleway Light" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" layoutX="248.0" layoutY="325.0" prefHeight="55.0" prefWidth="210.0" text="username:">
+               <font>
+                  <Font name="Raleway Light" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="accountNumberLabel" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="386.0" prefHeight="55.0" prefWidth="241.0" text="username:">
+               <font>
+                  <Font name="Raleway Light" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="goBackToMainMenuButton" fitHeight="70.0" fitWidth="76.0" layoutX="116.0" layoutY="114.0" onMouseClicked="#goBackToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../photos/bank/backArrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

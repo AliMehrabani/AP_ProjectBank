@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.PayPageGraphicController">
+   <children>
+      <Pane layoutX="197.0" layoutY="161.0" prefHeight="367.0" prefWidth="501.0" style="-fx-border-color: gray; -fx-border-radius: 8;">
+         <children>
+            <Label alignment="CENTER" layoutX="112.0" layoutY="38.0" prefHeight="55.0" prefWidth="280.0" text="Pay Receipt">
+               <font>
+                  <Font name="Raleway Light" size="37.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="26.0" layoutY="136.0" prefHeight="52.0" prefWidth="455.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.4000244140625" minWidth="10.0" prefWidth="140.33339233398436" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.46660766601565" minWidth="10.0" prefWidth="330.46660766601565" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label layoutX="10.0" layoutY="77.0" prefHeight="52.0" prefWidth="128.0" text="Receipt ID">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="receiptIDTextField" prefHeight="48.0" prefWidth="270.0" stylesheets="@../../cssFiles/textFieldProductPage.css" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Raleway" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Button fx:id="payButton" layoutX="25.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#pay" prefHeight="61.0" prefWidth="458.0" style="-fx-background-color: #4caf50; -fx-background-radius: 8; -fx-border-radius: 8;" text="Pay" textFill="WHITE">
+               <font>
+                  <Font name="Raleway Light" size="27.0" />
+               </font>
+            </Button>
+            <Label fx:id="alertLabel" alignment="CENTER" layoutX="39.0" layoutY="307.0" prefHeight="39.0" prefWidth="425.0" text="Receipt ID" textFill="#ff0909">
+               <font>
+                  <Font name="Raleway Light" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="goBackToMainMenuButton" fitHeight="70.0" fitWidth="76.0" layoutX="114.0" layoutY="164.0" onMouseClicked="#goBackToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../photos/bank/backArrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

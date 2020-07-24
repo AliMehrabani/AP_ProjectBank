@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.GetTransactionsPageGraphicController">
+   <children>
+      <Pane layoutX="179.0" layoutY="45.0" prefHeight="589.0" prefWidth="542.0" style="-fx-border-color: gray; -fx-border-radius: 8;">
+         <children>
+            <Label alignment="CENTER" layoutX="131.0" layoutY="23.0" prefHeight="55.0" prefWidth="280.0" text="Transactions">
+               <font>
+                  <Font name="Raleway Light" size="37.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="receiptInformationPane" layoutX="23.0" layoutY="198.0" prefHeight="328.0" prefWidth="496.0" style="-fx-border-color: #c7c7c7; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 1;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.4000244140625" minWidth="10.0" prefWidth="113.99998779296874" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.6" minWidth="10.0" prefWidth="350.8000122070313" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="55.0" prefWidth="169.0" text="source" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="77.0" prefHeight="55.0" prefWidth="169.0" text="destination" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="77.0" prefHeight="55.0" prefWidth="169.0" text="money" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="55.0" prefWidth="109.0" text="description" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="43.0" prefHeight="55.0" prefWidth="169.0" text="receipt id" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="37.0" prefHeight="55.0" prefWidth="169.0" text="receipt type">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="receiptTypeLabel" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="26.0" prefHeight="37.0" prefWidth="374.0" text="receipt type" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="receiptIDLabel" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="26.0" prefHeight="37.0" prefWidth="376.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="moneyLabel" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="63.0" prefHeight="37.0" prefWidth="386.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sourceIDLabel" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="100.0" prefHeight="37.0" prefWidth="392.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="destinationIDLabel" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="137.0" prefHeight="36.0" prefWidth="412.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionLabel" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="174.0" prefHeight="36.0" prefWidth="381.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="238.0" prefHeight="55.0" prefWidth="109.0" text="paid" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="paidLabel" alignment="CENTER_RIGHT" layoutX="139.0" layoutY="241.0" prefHeight="36.0" prefWidth="381.0" text="receipt type" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Raleway Light" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </GridPane>
+            <ComboBox fx:id="receiptTypeComboBox" layoutX="31.0" layoutY="126.0" onAction="#setReceiptType" onMouseClicked="#mouseClicked" prefHeight="48.0" prefWidth="192.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+            <TextField fx:id="receiptIDTextField" layoutX="231.0" layoutY="126.0" prefHeight="48.0" prefWidth="239.0" promptText="Enter Receipt ID" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@../../cssFiles/textFieldProductPage.css">
+               <font>
+                  <Font name="Raleway" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="484.0" layoutY="130.0" onMouseClicked="#searchForReceipt" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../photos/bank/search.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="downArrow" fitHeight="55.0" fitWidth="52.0" layoutX="245.0" layoutY="537.0" onMouseClicked="#seeMoreReceipts" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../../photos/bank/backArrow.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="goBackToMainMenuButton" fitHeight="65.0" fitWidth="66.0" layoutX="97.0" layoutY="45.0" onMouseClicked="#goBackToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../photos/bank/backArrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
